@@ -58,7 +58,6 @@ with tab2:
                y =  evaluations.loc['XGBoost'])
     ])
     st.plotly_chart(fig, use_container_width=True)
-
     st.dataframe(evaluations)
   
 with tab3:
