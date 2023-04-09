@@ -40,8 +40,6 @@ st.write('Predictd Species: ', species_encoder.inverse_transform(pred)[0])
 with tab2:
   st.header("Evaluation")
   
-  if menuItem == "Evaluation":
-   
     x = evaluations.columns
     fig = px.Figure(data=[
         px.Bar(name = 'Decision Tree',
