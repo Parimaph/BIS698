@@ -40,7 +40,7 @@ with tab2:
   st.header("Evaluation")
   
   x = evaluations.columns
-    fig = px.Figure(data=[
+  fig = px.Figure(data=[
         px.Bar(name = 'Decision Tree',
                x = x,
                y = evaluations.loc['Decision Tress']),
@@ -56,9 +56,9 @@ with tab2:
         px.Bar(name = 'XGBoost',
                x = x,
                y =  evaluations.loc['XGBoost'])
-    ])
-    st.plotly_chart(fig, use_container_width=True)
-    st.dataframe(evaluations)
+  ])
+  st.plotly_chart(fig, use_container_width=True)
+  st.dataframe(evaluations)
   
 with tab3:
   st.header("About")
