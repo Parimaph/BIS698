@@ -1,6 +1,7 @@
 
 import streamlit as st 
 from streamlit_option_menu import option_menu
+from PIL import Image
 import plotly.graph_objects as px
 import numpy as np
 import pandas as pd
@@ -17,6 +18,8 @@ island_encoder = pickle.load(open('encoder.island.sav','rb'))
 sex_encoder = pickle.load(open('encoder.sex.sav','rb'))
 species_encoder = pickle.load(open('encoder.species.sav','rb'))
 evaluations = pickle.load(open('evals.all.sav','rb'))
+
+image = Image.open('AdelieChinstrapGentoo.jpg')
 
 with tab1:
   st.header("Penquin Prediction")
@@ -62,5 +65,5 @@ with tab2:
   
 with tab3:
   st.header("About")
-
+  st.image(image, caption='Penguins Species')
     
