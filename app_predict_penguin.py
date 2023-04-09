@@ -41,7 +41,6 @@ with tab2:
   st.header("Evaluation")
   evaluations = pickle.load(open('evals.all.sav','rb'))
 
-    st.plotly_chart(fig, use_container_width=True)
 
     st.dataframe(evaluations)
     
