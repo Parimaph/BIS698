@@ -8,7 +8,7 @@ import pickle
 from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 
-st.title("My Penguin Species Predition")
+st.title("My Penguin Species Predition <3")
 
 tab1, tab2, tab3 = st.tabs(["Penquin Prediction", "Evaluation", "About"])
 
@@ -17,8 +17,6 @@ island_encoder = pickle.load(open('encoder.island.sav','rb'))
 sex_encoder = pickle.load(open('encoder.sex.sav','rb'))
 species_encoder = pickle.load(open('encoder.species.sav','rb'))
 evaluations = pickle.load(open('evals.all.sav','rb'))
-
-st.title("My Penguin Species Predition :)")
 
 with tab1:
   st.header("Penquin Prediction")
