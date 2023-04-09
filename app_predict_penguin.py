@@ -18,7 +18,7 @@ sex_encoder = pickle.load(open('encoder.sex.sav','rb'))
 species_encoder = pickle.load(open('encoder.species.sav','rb'))
 evaluations = pickle.load(open('evals.all.sav','rb'))
 
-if with tab1:
+with tab1:
   st.header("Penquin Prediction")
   x1 = st.radio("Select island ",island_encoder.classes_)
   x1 = island_encoder.transform([x1])[0]
@@ -36,30 +36,7 @@ if with tab1:
 
   st.write('Predictd Species: ', species_encoder.inverse_transform(pred)[0])
   
-
-x = evaluations.columns
-    fig = px.Figure(data=[
-        px.Bar(name = 'Decision Tree',
-               x = x,
-               y = evaluations.loc['Decision Tress']),
-        px.Bar(name = 'Random Forest',
-               x = x,
-               y =  evaluations.loc['Random Forest']),
-        px.Bar(name = 'KNN',
-               x = x,
-               y =  evaluations.loc['KNN']),
-        px.Bar(name = 'AdaBoost',
-               x = x,
-               y =  evaluations.loc['AdaBoost']),
-        px.Bar(name = 'XGBoost',
-               x = x,
-               y =  evaluations.loc['XGBoost'])
-    ])
-    st.plotly_chart(fig, use_container_width=True)
-
-    st.dataframe(evaluations) 
-    
-if with tab2:
+with tab2:
   st.header("Evaluation")
   
   x = evaluations.columns
