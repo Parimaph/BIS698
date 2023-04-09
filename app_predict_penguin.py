@@ -39,5 +39,30 @@ with tab1:
 
 with tab2:
   st.header("Evaluation")
+  
+  x = evaluations.columns
+    fig = px.Figure(data=[
+        px.Bar(name = 'Decision Tree',
+               x = x,
+               y = evaluations.loc['Decision Tress']),
+        px.Bar(name = 'Random Forest',
+               x = x,
+               y =  evaluations.loc['Random Forest']),
+        px.Bar(name = 'KNN',
+               x = x,
+               y =  evaluations.loc['KNN']),
+        px.Bar(name = 'AdaBoost',
+               x = x,
+               y =  evaluations.loc['AdaBoost']),
+        px.Bar(name = 'XGBoost',
+               x = x,
+               y =  evaluations.loc['XGBoost'])
+    ])
+    st.plotly_chart(fig, use_container_width=True)
+
+    st.dataframe(evaluations)
+  
+with tab3:
+  st.header("About")
 
     
