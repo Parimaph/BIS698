@@ -12,8 +12,6 @@ st.title("My Penguin Species Predition :)")
 
 tab1, tab2, tab3 = st.tabs(["Penquin Prediction", "Evaluation", "About"])
 
-with tab1:
-  
 model = pickle.load(open('model.penguins.sav','rb'))
 island_encoder = pickle.load(open('encoder.island.sav','rb'))
 sex_encoder = pickle.load(open('encoder.sex.sav','rb'))
@@ -22,7 +20,7 @@ evaluations = pickle.load(open('evals.all.sav','rb'))
 
 st.title("My Penguin Species Predition :)")
 
-#with tab1:
+with tab1:
   st.header("Penquin Prediction")
   
 x1 = st.radio("Select island ",island_encoder.classes_)
