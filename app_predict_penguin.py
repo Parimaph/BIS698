@@ -8,7 +8,7 @@ import pickle
 from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 
-st.title("My Penguin Species Predition :)")
+st.title("My Penguin Species Predition")
 
 tab1, tab2, tab3 = st.tabs(["Penquin Prediction", "Evaluation", "About"])
 
